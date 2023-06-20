@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%- title %></title>
+  <%- include('./meta.ejs') %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/swiper-bundle.css">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body class="">
+  <header class="z-20 w-full">
+    <nav class="fixed container relative flex justify-between items-center text-white py-7 border-b">
+      <a href="/">
+        <img class="w-[147px] md:w-[245px]"
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true"
+          alt="AI 工具王">
+      </a>
+      <button type="button" id="btn-menu">
+        <span class="material-icons block md:hidden">menu</span>
+      </button>
+      <ul class="hidden md:flex md:items-center md:gap-5">
+        <li><a href="/index.html">首頁</a></li>
+        <li><a href="/price.html">定價</a></li>
+      </ul>
+      <div id="menu-list" class="hidden absolute top-full left-0 w-full min-h-full md:hidden bg-black">
+        <ul class="font-black text-display03 flex flex-col justify-center items-center menu-h">
+          <li>
+            <a class="flex items-center py-1" href="/index.html">首頁</a>
+          </li>
+          <li>
+            <a class="flex items-center py-1" href="/price.html">定價</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <%- include('../partials/index-slogen.ejs') %>
+    <%- include('../partials/price-slogen.ejs') %>
+  </header>
+  
+  <%- contents %>
+
+  <footer class="py-8">
+    <div class="container font-bold text-base flex justify-between sm:justify-start items-center flex-wrap">
+      <p class="mb-8 sm:mb-0 sm:mr-25">AI工具王 © 2023</p>
+      <a class="mb-8 sm:mb-0 flex items-center sm:order-1 sm:ml-auto" id="back-to-top" href="/">
+        Back to top
+        <span class="material-icons black ml-3">arrow_upward</span>
+      </a>
+      <div class="w-full sm:w-auto flex items-center gap-x-5">
+        <a href="">Facebook</a>
+        <a href="">Twitter</a>
+        <a href="">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
+
+
