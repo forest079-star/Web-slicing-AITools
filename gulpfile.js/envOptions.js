@@ -1,7 +1,7 @@
 const srcPath = './app';
 const distPath = './dist';
 const nodePath = './node_modules';
-const nodePath2 = 'node_modules';
+
 let envOptions = {
   string: 'env',
   default: {
